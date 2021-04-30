@@ -28,6 +28,7 @@ dependencies:
   geolocator: any
   chips_choice: any
   flutter_spinkit: any
+  auto_size_text: any
 
 dev_dependencies:
   flutter_test:

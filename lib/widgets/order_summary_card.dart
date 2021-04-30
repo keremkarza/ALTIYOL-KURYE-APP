@@ -1,5 +1,6 @@
 import 'package:altiyol_kurye/services/firebase_services.dart';
 import 'package:altiyol_kurye/services/order_services.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -416,7 +417,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
           //TODO: delete all isOrder related things
           widget.isOrder
               ? ListTile(
-                  title: Text(
+                  title: AutoSizeText(
                     _orderServices.statusString(widget.document),
                     style: TextStyle(
                       fontSize: 12,
@@ -424,7 +425,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  subtitle: Text(
+                  subtitle: AutoSizeText(
                     'Tarih : ${DateFormat.yMMMd().format(DateTime.parse(widget.document.data()['seller']['timeStamp']))}',
                     style: TextStyle(
                       fontSize: 12,
@@ -440,15 +441,15 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                   trailing: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      AutoSizeText(
                         'Ödeme Tipi : ${widget.document.data()['cod'] == 0 ? 'Online' : widget.document.data()['cod'] == 2 ? 'Kapıda Kartla' : 'Kapıda Nakit'}',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(
-                        'Miktar : ${widget.document.data()['total']}\$',
+                      AutoSizeText(
+                        'Miktar : ${widget.document.data()['total']} TL',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
@@ -560,7 +561,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                             style: TextStyle(fontSize: 12),
                           ),
                           subtitle: Text(
-                            '${widget.document.data()['products'][index]['qty']} x ${widget.document.data()['products'][index]['price'].toStringAsFixed(2)}\$ = ${widget.document.data()['products'][index]['total'].toStringAsFixed(2)}\$',
+                            '${widget.document.data()['products'][index]['qty']} x ${widget.document.data()['products'][index]['price'].toStringAsFixed(2)} TL = ${widget.document.data()['products'][index]['total'].toStringAsFixed(2)} TL',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.grey,
@@ -658,7 +659,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                                     ),
                                   ),
                                   Text(
-                                    '${widget.document.data()['deliveryFee'].toStringAsFixed(2)}\$',
+                                    '${widget.document.data()['deliveryFee'].toStringAsFixed(2)} TL',
                                     style: TextStyle(
                                       color: Colors.grey,
                                     ),
