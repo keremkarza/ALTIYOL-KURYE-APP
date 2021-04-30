@@ -1,0 +1,55 @@
+name: altiyol_kurye
+description: A new Flutter application.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: any
+  firebase_core: any
+  firebase_auth: any
+  email_validator: any
+  cloud_firestore: any
+  flutter_easyloading: any
+  provider: any
+  image_picker: any
+  geocoder: any
+  location: any
+  firebase_storage: any
+  maps_launcher: any
+  url_launcher: any
+  flutter_phone_direct_caller: any
+  geolocator: any
+  chips_choice: any
+  flutter_spinkit: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+  #   - images/a_dot_ham.jpeg
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
