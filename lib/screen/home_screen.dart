@@ -125,7 +125,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   return Center(child: CircularProgressIndicator());
                 }
                 if (snapshot.data.size == 0) {
-                  return Center(child: Text('$status siparis yok'));
+                  return Center(
+                      child: Text('${optionsForText[tag]} siparis yok'));
                 }
                 if (!snapshot.hasData) {
                   return Center(child: Text('siparis yok'));

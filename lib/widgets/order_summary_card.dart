@@ -221,7 +221,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                     onPressed: () {
                       if (document.data()['cod'] == 1 ||
                           document.data()['cod'] == 2) {
-                        showMyDialog('Receive Payment', context, 'Delivered',
+                        showMyDialog('Ödemeyi Al', context, 'Delivered',
                             _orderServices, document.id);
                       }
                       //normal kısım
@@ -442,7 +442,7 @@ class _OrderSummaryCardState extends State<OrderSummaryCard> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       AutoSizeText(
-                        'Ödeme Tipi : ${widget.document.data()['cod'] == 0 ? 'Online' : widget.document.data()['cod'] == 2 ? 'Kapıda Kartla' : 'Kapıda Nakit'}',
+                        'Ödeme Tipi : ${widget.document.data()['cod'] == 0 ? 'Online' : widget.document.data()['cod'] == 2 ? 'Kapıda Nakit' : 'Kapıda Kartla'}',
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
